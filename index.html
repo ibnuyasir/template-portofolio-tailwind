@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="Ibnu Yasir" />
+    <meta name="description" content="Ibnu Yasir - portfolio about web developing services" />
+    <meta name="keywords" content="portfolio, web developer, full stack developer, programmer, software engineer, front-end, back-end" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ibnu Yasir | Web Developer" />
+    <meta property="og:description" content="Professional web developer with expertise in front-end, back-end development and database management. View my work and get in touch." />
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/137759149?v=4" />
+    <meta property="og:url" content="https://ibnuyasir.dev" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ibnu Yasir | Web Developer" />
+    <meta name="twitter:description" content="Professional web developer with expertise in front-end, back-end development and database management." />
+    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/137759149?v=4" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0d1117">
+    <title>Ibnu Yasir | Web Developer</title>
+    <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin>
+    <link rel="preload" href="https://fonts.cdnfonts.com/css/call-of-ops-duty-ii" as="style">
+    <link rel="preload" href="https://fonts.cdnfonts.com/css/poppins" as="style">
+    <script src="https://cdn.jsdelivr.net/npm/progressbar.js"></script>
+    <link href="./css/style.css" rel="stylesheet">
+    <script src="conf/tailwind.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/call-of-ops-duty-ii" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+</head>
+
+<body class="antialiased min-h-screen flex flex-col text-white bg-gradient-to-b from-black to-gray-900">
+    <a href="#main-content"
+        class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary-600 text-white px-4 py-2 z-50">
+        Skip to main content
+    </a>
+    <header class="sticky top-0 z-40 w-full bg-black bg-opacity-95 border-b border-gray-800 backdrop-blur shadow-md">
+        <div class="container mx-auto px-4">
+
+            <!-- mobile nav -->
+
+            <div class="md:hidden flex justify-between items-center py-4">
+                <a href="#" class="text-primary-500 font-bold text-lg transition-colors hover:text-primary-400"
+                    aria-label="Home">
+                    IBNU YASIR
+                </a>
+                <button id="menu_btn" class="text-white hover:text-primary-400 focus:outline-none transition-colors"
+                    aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- desktop nav -->
+
+            <nav class="hidden md:flex justify-between items-center py-4">
+                <a href="#" class="text-primary-500 font-bold text-lg transition-colors hover:text-primary-400"
+                    aria-label="Home">
+                    IBNU YASIR
+                </a>
+                <ul class="flex space-x-6 text-white">
+                    <li><a href="#home"
+                            class="hover:text-primary-400 transition-colors py-2 border-b-2 border-transparent hover:border-primary-400">Home</a>
+                    </li>
+                    <li><a href="#about"
+                            class="hover:text-primary-400 transition-colors py-2 border-b-2 border-transparent hover:border-primary-400">About</a>
+                    </li>
+                    <li><a href="#services"
+                            class="hover:text-primary-400 transition-colors py-2 border-b-2 border-transparent hover:border-primary-400">Services</a>
+                    </li>
+                    <li>
+                        <a href="#" class="inline-flex items-center hover:text-primary-400 transition-colors">
+                            <span>Login</span>
+                        </a>
+                    </li>
+                    |
+                    <li>
+                        <a href="#"
+                            class="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded transition-colors">
+                            Register
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- menu sidebar -->
+
+    <div id="sidebar"
+        class="fixed inset-y-0 right-0 w-72 bg-gray-900 shadow-xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out"
+        aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title">
+        <div class="flex justify-between items-center p-6 border-b border-gray-800">
+            <h2 id="mobile-menu-title" class="text-primary-500 font-bold text-lg">MENU</h2>
+            <button id="close_btn" class="text-white hover:text-primary-400 focus:outline-none transition-colors"
+                aria-label="Close menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <nav>
+            <ul class="p-6 space-y-1">
+                <li>
+                    <a href="#home"
+                        class="block py-3 px-4 hover:bg-gray-800 hover:text-primary-400 rounded transition-colors">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#about"
+                        class="block py-3 px-4 hover:bg-gray-800 hover:text-primary-400 rounded transition-colors">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="#services"
+                        class="block py-3 px-4 hover:bg-gray-800 hover:text-primary-400 rounded transition-colors">
+                        Services
+                    </a>
+                </li>
+                <li class="pt-4 border-t border-gray-800 mt-4">
+                    <a href="#login"
+                        class="block py-3 px-4 hover:bg-gray-800 hover:text-primary-400 rounded transition-colors">
+                        Login
+                    </a>
+                </li>
+                <li>
+                    <a href="#register"
+                        class="block py-3 px-4 bg-primary-600 hover:bg-primary-700 text-white rounded transition-colors mt-2">
+                        Register
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- ovrlay -->
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity" aria-hidden="true"
+        tabindex="-1"></div>
+
+    <!-- main content -->
+    <main id="main-content">
+        <section id="home" class="container mx-auto px-4 py-16 md:py-24">
+            <div class="flex flex-col md:flex-row md:items-center">
+                <div class="md:w-1/2 animate-fade-in">
+                    <span class="inline-block text-primary-400 font-medium mb-2">FULL STACK DEVELOPER</span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-display tracking-wider mb-4">Ibnu Yasir</h1>
+                    <div class="w-24 h-1 bg-primary-500 rounded mb-6"></div>
+                    <p class="text-lg text-gray-300 mb-6">Crafting elegant, high-performance digital experiences with
+                        modern web technologies. Specialized in creating responsive, accessible and user-friendly
+                        applications.</p>
+                    <p class="text-gray-400 mb-8">With expertise in front-end, back-end development and database
+                        optimization, I build complete solutions that deliver exceptional user experiences.</p>
+                    <div class="flex space-x-4">
+                        <a href="#services"
+                            class="border border-white hover:border-primary-400 hover:text-primary-400 px-6 py-3 rounded font-medium transition-colors">
+                            My Services
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center md:justify-end">
+                    <div class="relative">
+                        <div
+                            class="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-primary-600 to-primary-900 rounded-lg shadow-xl transform rotate-3 absolute top-4 right-4">
+                        </div>
+                        <div
+                            class="w-64 h-64 md:w-80 md:h-80 bg-gray-800 border rounded-lg shadow-xl overflow-hidden relative z-10">
+                            <img src="https://avatars.githubusercontent.com/u/137759149?v=4" alt="Profile">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- services -->
+
+        <section id="services" class="py-16 md:py-24 bg-gray-900">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <span class="text-primary-400 font-medium">WHAT I DO</span>
+                    <h2 class="text-3xl md:text-4xl font-semibold mt-2">SERVICES</h2>
+                    <div class="w-16 h-1 bg-primary-500 mx-auto mt-4"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+                    <div
+                        class="bg-black bg-opacity-40 p-8 rounded-lg shadow-lg border border-gray-800 transition-transform hover:transform hover:scale-105">
+                        <div class="text-primary-400 mb-6 flex justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center mb-3">WEB DEVELOPMENT</h3>
+                        <p class="text-gray-300 text-center">Creating responsive and high-performance websites with
+                            modern frameworks and best practices. Specialized in React, Vue, and Next.js.</p>
+                    </div>
+                    <div
+                        class="bg-black bg-opacity-40 p-8 rounded-lg shadow-lg border border-gray-800 transition-transform hover:transform hover:scale-105">
+                        <div class="text-primary-400 mb-6 flex justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center mb-3">DATABASE MANAGEMENT</h3>
+                        <p class="text-gray-300 text-center">Designing efficient database architectures and optimizing
+                            queries for maximum performance. Experience with SQL and NoSQL solutions.</p>
+                    </div>
+                    <div
+                        class="bg-black bg-opacity-40 p-8 rounded-lg shadow-lg border border-gray-800 transition-transform hover:transform hover:scale-105">
+                        <div class="text-primary-400 mb-6 flex justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-center mb-3">NETWORKING</h3>
+                        <p class="text-gray-300 text-center">Implementing secure and scalable network solutions. Setting
+                            up reliable infrastructure for your applications with cloud services.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- about -->
+
+        <section id="about" class="py-16 md:py-24">
+            <div class="container mx-auto px-4">
+                <div class="mb-10">
+                    <span class="text-primary-400 font-medium">DISCOVER</span>
+                    <h2 class="text-3xl font-semibold mt-2">ABOUT ME</h2>
+                    <div class="w-16 h-1 bg-primary-500 mt-4 mb-8"></div>
+                </div>
+                <div class="space-y-6 text-gray-300 max-w-3xl">
+                    <p>With over 3 years of experience in web development, I specialize in building robust, scalable
+                        applications that solve real business problems. My approach combines technical excellence with a
+                        deep understanding of user experience principles</p>
+                    <p>I believe that great software is not just about code, it's about creating solutions that are
+                        intuitive, accessible, and provide real value to users. Every project I undertake is guided by
+                        this philosophy</p>
+                    <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source
+                        projects, or sharing my knowledge through technical writing and community involvement</p>
+                </div>
+
+                <div class="mt-12">
+                    <h3 class="text-xl font-semibold mb-6">TECHNICAL SKILLS</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="bg-gray-800 p-4 rounded flex flex-col items-center">
+                            <div id="circle-js" class="relative w-24 h-24 mb-2 flex items-center justify-center"></div>
+                            <span class="mt-2">JavaScript</span>
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded flex flex-col items-center">
+                            <div id="circle-php" class="relative w-24 h-24 mb-2 flex items-center justify-center"></div>
+                            <span class="mt-2">PHP</span>
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded flex flex-col items-center">
+                            <div id="circle-c" class="relative w-24 h-24 mb-2 flex items-center justify-center"></div>
+                            <span class="mt-2">C</span>
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded flex flex-col items-center">
+                            <div id="circle-java" class="relative w-24 h-24 mb-2 flex items-center justify-center">
+                            </div>
+                            <span class="mt-2">JAVA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="py-12 px-6">
+            <h3 class="text-xl font-semibold mb-4">SHARING MY ACTIVITY</h3>
+            <p class="text-gray-300 mb-6">
+                My current activity is as a librarian in a village library, if you want to know something, the library
+                as a treasure trove of knowledge plays an important role in order to educate and increase public
+                knowledge, therefore I chose to work temporarily as a librarian, the existence of libraries in the midst
+                of society, schools, colleges, universities, or in other institutions has a very big impact on the
+                progress where the library is located.
+                the issue of growing and increasing the spirit of reading and making reading a culture of Indonesian
+                society is one of the most interesting issues to discuss. This is because the growth of the spirit of
+                reading can lead to the ideal point of a nation. An ideal nation is a noble ideal of a nation because an
+                ideal nation is a characteristic of an advanced and civilized nation so that the right way is needed to
+                bring it to an ideal condition. One of these basic keys is by reading, because someone who likes to read
+                must have ideas, and if they have ideas, they are followed by efforts to build those ideas into reality.
+                In the era of development and advancement of science and technology today, the role of libraries and
+                information centers is increasingly felt by the community as a source of development information as well
+                as a means of learning and teaching to improve intelligence and skills. In addition, libraries play a
+                role as non-formal educational institutions that can provide opportunities for lifelong education. Books
+                as a mass communication tool are a very important thing in spurring people's interest in reading.
+                Reading is the most basic activity in education and is one of the most important skills and habits in
+                everyday life. Through reading, people can find new ideas to get information, increase their knowledge
+                and broaden their horizons
+            </p>
+            <p class="text-gray-300 mb-6">
+                But the main problem in Indonesia is actually not alliteration (illiteracy), because the number is
+                getting smaller and smaller. Our main problem is actually those who can read, but do not want to read.
+                In information science, the unwillingness to read is called alliteration. This problem occurs because
+                there is no motivation or motivator to read and an environment that does not read when people can read.
+                It is not difficult to find the roots, because it is often discussed, among others, the strong culture
+                of hearing and oral culture, the socio-economic conditions of society do not support interest in reading
+                and people's purchasing power, technological and communication advances, especially electronic media,
+                can be a threat to interest in reading, and the learning/teaching system and curriculum in schools or
+                universities do not support the love of reading and writing. Indeed, theoretically there is a positive
+                relationship between reading interest and reading habits and reading ability. The low interest in
+                reading in society results in low reading habits, and these low reading habits also result in low
+                reading ability. That is what is happening in Indonesian society today. Reading is indeed more difficult
+                when compared to seeing or hearing. Reading requires the ability to understand a series of sentences and
+                then interpret them yourself without the help of others, and not everyone has enough patience to do
+                something like that. The culture of reading in our society is still low and concerning. We are still
+                sucked into the tradition of hearing and speaking, not yet shifting to an advanced society that likes to
+                read and write. Not only farmers, fishermen, laborers, small businessmen, and lower-class people in
+                villages but academics, bureaucrats, and ordinary people in the upper middle class are also lazy to read
+                and write
+            </p>
+        </section>
+
+        <section class="py-12 bg-gray-900 text-center">
+            <h3 class="text-2xl font-semibold mb-6">CONTACT US</h3>
+            <div class="flex justify-center space-x-4 mb-6">
+                <a href="#" class="text-xl hover:text-purple-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="auto" fill="currentColor"
+                        class="bi bi-instagram" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                    </svg>
+                </a>
+                <a href="#" class="text-xl hover:text-purple-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="auto" fill="currentColor"
+                        class="bi bi-twitter-x" viewBox="0 0 16 16">
+                        <path
+                            d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                    </svg></a>
+                <a href="#" class="text-xl hover:text-purple-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="auto" fill="currentColor"
+                        class="bi bi-facebook" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                    </svg>
+                </a>
+            </div>
+            <button class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-xs">
+                LOGIN FOR COMMENTS
+            </button>
+        </section>
+
+        <section class="py-12 px-6">
+            <div class="flex mb-4">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center text-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="46" height="auto" fill="currentColor"
+                        class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                    </svg>
+                </div>
+                <div class="ml-4 text-left">
+                    <p class="font-bold">USER-I</p>
+                    <p class="text-2xl">★★★★★</p>
+                </div>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+                ratione rem voluptatem distinctio illum dolores ea odit...</p>
+        </section>
+
+        <footer class="text-center text-gray-500 text-sm py-6 border-t border-gray-800">
+            THIS WEB CREATE BY IBNU YASIR – ALL RIGHTS RESERVED
+        </footer>
+        <script src="conf/script.js">
+        </script>
+</body>
+</html>
